@@ -1,3 +1,11 @@
+import {
+  Chart as ChartJS,
+  ChartOptions,
+  ChartData,
+  TooltipItem,
+} from "chart.js";
+import ChartDataLabels from "chartjs-plugin-datalabels";
+import { chartData } from "../data/data";
 export const options: ChartOptions<"bar"> = {
   indexAxis: "y", // Horizontal bar chart
   responsive: true,
@@ -11,7 +19,7 @@ export const options: ChartOptions<"bar"> = {
     },
     tooltip: {
       callbacks: {
-        label: function (tooltipItem) {
+        label: function (tooltipItem: TooltipItem<"bar">) {
           const datasetLabel = tooltipItem.dataset.label || "";
           const value = tooltipItem.raw as number;
           if (datasetLabel === "Connection Status (1: Open, 0: Closed)") {
