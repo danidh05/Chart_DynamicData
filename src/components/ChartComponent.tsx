@@ -9,8 +9,6 @@ import {
   Title,
   Tooltip,
   Legend,
-  ChartOptions,
-  ChartData,
 } from "chart.js";
 import { options } from "../options/options";
 import ChartDataLabels from "chartjs-plugin-datalabels";
@@ -24,7 +22,7 @@ ChartJS.register(
   Title,
   Tooltip,
   Legend,
-  ChartDataLabels
+  ChartDataLabels,
 );
 
 const ChartComponent: React.FC = () => {
